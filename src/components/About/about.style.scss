@@ -1,0 +1,194 @@
+.about-section-one {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px;
+    color: white;
+}
+.about-section-one-div-1, 
+.about-section-one-div-3 {
+    width: clamp(340px, 40vw, 600px);
+    h2 {
+        margin-bottom: 25px;
+        text-align: center;
+        letter-spacing: 1px;
+        font-weight: 400;
+        font-size: 25px;
+    }
+    p {
+        margin-bottom: 25px;
+        font-weight: 100;
+        letter-spacing: 1px;
+    }
+    div {
+        border: 1px solid white;
+        font-weight: 300;
+        letter-spacing: 1px;
+        width: max-content;
+        display: inline-block;
+        margin: 0px 6px 25px 5px;
+        padding: 8px;
+        background-color: #082934c2;
+    }
+}
+.about-section-one-div-2 {
+    width: clamp(340px, 40vw, 600px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+    p {
+        border: 1px solid white;
+        padding: 5px 0px 5px 5px;
+        background-color: #082934c2;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+}
+.about-section-one-div-4 {
+    width: clamp(340px, 40vw, 600px);
+    display: flex; 
+    gap: 25px;
+    div {
+        border: 1px solid white;
+        padding: 10px;
+        background-color: #082934c2;
+    }
+    p {
+        font-weight: 300;
+        letter-spacing: 1px;
+        margin-top: 8px;
+    }
+}
+
+.about-section-two {
+    color: white;
+    margin-top: 25px;
+    h2 {
+        text-align: center;
+        letter-spacing: 1px;
+        font-weight: 400;
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+}
+.about-section-two-div {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 45px);
+    gap: 25px;
+    margin-bottom: 50px;
+    div {
+        border: 1px solid white;
+        text-align: center;
+        background-color: #082934c2;
+        line-height: 45px;
+        p {
+            letter-spacing: 1px;
+            font-size: clamp(15px, 2vw, 18px);
+            font-weight: 300;
+        }
+    }
+}
+.about-section-two-div div:nth-child(7){
+    grid-column: 1/4;
+}
+.github-Projects-title {
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 25px;
+}
+.mySwiper {
+    width: 80%;
+    min-width: 780px;
+    margin: 50px auto;
+}
+.mySwiperSlide {
+    position: relative;
+}
+.about-container-project {
+    position: relative;
+    width: 100%;
+    min-width: 300px;
+    height: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid black;
+    text-align: center;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    p {
+        border-radius: 15px;
+        padding: 0px 10px;
+        font-weight: 100;
+        letter-spacing: 1px;
+    }
+    a {
+        text-decoration: none;
+        color: #03ABE8;
+        letter-spacing: 1px;
+        font-size: clamp(18px, 3vw, 25px);
+        padding-bottom: 10px;
+    }
+}
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+@media screen and (max-width: 1050px) {
+    .about-section-one-div-4 {
+        flex-wrap: wrap;
+        div {
+            width: 100%;
+        }
+    }
+    .about-section-one-div-2 {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 830px) {
+    .mySwiper {
+        min-width: 500px;
+    }
+    .about-container-project {
+        height: 350px;
+    }
+}
+@media screen and (max-width: 780px) {
+    .about-section-one {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-section-one-div-1, 
+    .about-section-one-div-3,
+    .about-section-one-div-2,
+    .about-section-one-div-4 {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .about-section-two-div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 550px) {
+    .mySwiper {
+        min-width: 340px;
+    }
+    .about-container-project {
+        min-width: 210px;
+        height: 300px;
+    }
+}

@@ -1,0 +1,70 @@
+.error-page {
+  width: 80%;
+  height: clamp(330px, 33vw, 530px);
+  margin: 50px auto;
+  border-radius: 15px;
+  background-color: #eb9d30a8;
+}
+.conteiner-error-page {
+    position: relative;
+    width: 100%;
+    height: clamp(250px, 25vw, 450px);
+    background-image: url(../../Images/404-error-page.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .conteiner-error {
+      position: relative;
+      transform: translateY(clamp(245px, 24vw, 445px));
+      height: 80px;
+      line-height: 60px;
+    }
+    
+    .conteiner-text {
+      position: absolute;
+      overflow: hidden;
+      height: 60px;
+      top: 50%;
+      margin-left: 10%;
+      transform: translateY(-50%);
+      border-right: 3px solid white;
+      width: 0px;
+      animation: typewriter 2s steps(10)  infinite alternate , blink 0.5s steps(10) infinite;
+    }    
+
+    p { 
+      position: absolute;
+      color: white;
+      width: 100%;
+      font-size: clamp(20px, 5vw, 35px);
+    }
+
+    .error-icon {
+      position: absolute;
+      color: white;
+      font-size: 35px;
+      margin: 20px;
+      cursor: pointer;
+    }
+}
+
+@keyframes typewriter {
+    0% {
+      width: 0px;
+    }
+  
+    100% {
+      width: clamp(150px, 35vw, 250px);
+    }
+}
+  
+@keyframes blink {
+    0% {
+      border-right-color: white;
+    }
+  
+    100% {
+      border-right-color: transparent;
+    }
+}

@@ -1,0 +1,199 @@
+.home-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+.home-container-text {
+    h2 {
+        color: #FFFF;
+        line-height: 50px;
+        font-size: 35px;
+        padding-bottom: 25px;
+        span {
+            color: #03ABE8;
+        }
+    }
+    p {
+        max-width: 700px;
+        color: #FFFF;
+        line-height: 25px;
+        letter-spacing: 2px;
+    }
+    .cv {
+        width: max-content; 
+        text-decoration: none;
+     }
+    .button {
+        position: relative;
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border: 1px solid #17795E;
+        background-color: #209978;
+        overflow: hidden;
+    }  
+    .button, .button__icon, .button__text {
+        transition: all 0.3s;
+    }  
+    .button .button__text {
+        transform: translateX(10px);
+        color: #fff;
+    }  
+    .button .button__icon {
+        position: absolute;
+        transform: translateX(109px);
+        height: 100%;
+        width: 39px;
+        background-color: #17795E;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .button .svg {
+        width: 20px;
+        fill: #fff;
+    }    
+    .button:hover {
+        background: #17795E;
+    }  
+    .button:hover .button__text {
+      color: transparent;
+    }
+    .button:hover .button__icon {
+      width: 148px;
+      transform: translateX(0);
+    }
+    .button:active .button__icon {
+      background-color: #146c54;
+    }
+    .button:active {
+      border: 1px solid #146c54;
+    }
+}
+.home-container-img {
+    position: relative;
+    border-radius: 10px;
+    width: clamp(200px, 23vw, 280px);
+    height: clamp(300px, 35vw, 400px); 
+    text-align: center; 
+    background-color: #D9D5D6;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 12px 0px;
+        border-radius: 10px;
+    }
+    div {
+        position: absolute;
+        height: 6px;
+        background-color: crimson;
+        width: 30%;
+    }
+    div:nth-child(1){
+        width: 6px;
+        height: 20%;
+        background-color: #60AAE7;
+        transform: translateX(-20px) translateY(-20px);
+    }
+    div:nth-child(2){
+        transform: translateY(-20px) translateX(-20px);
+        background-color: #60AAE7;
+    }
+    div:nth-child(4){
+        width: 6px;
+        height: 20%;
+        right: 0;
+        bottom: 0;
+        transform: translateY(20px) translateX(20px);
+        background-color: #60AAE7;
+    }
+    div:nth-child(5){
+        right: 0;
+        background-color: #60AAE7;
+        transform: translateY(10px) translateX(20px);
+    }
+}
+
+.home-container-icon {
+    margin: 20px 0px 30px 0px;
+    width: max-content;
+    display: flex;
+    gap: 30px;
+    a {
+        width: 37.5px;
+        height: 38px;
+        background-color: #FFFF;
+        border-radius: 5px;
+        &:hover {
+            transform: scale(1.1);
+        }
+    } 
+}
+.home-icon {
+    position: absolute;
+    font-size: 45px;
+    cursor: pointer;
+    transform: translateY(-3px) translateX(-1px);
+}
+.linkedin{
+    color: #0A66C2;  
+}
+.github{
+    color: #000;
+}
+.telegram {
+    color: #3491EC;
+}
+.home-container-icon .tel {
+    border-radius: 50%;
+}
+.gml {
+    position: relative;
+}
+.gmail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+@media screen and (max-width: 1100px){
+    .home-container {
+        padding-bottom: 50px;
+        gap: 30px;
+    }
+    .home-container-img {
+        width: clamp(230px, 28vw, 330px);
+        height: clamp(350px, 40vw, 450px); 
+    }
+    .home-container-text {
+        max-width: 450px;
+    }
+}
+@media screen and (max-width: 850px){
+    .home-container {
+        gap: 80px;
+        flex-direction: column-reverse;
+    }
+    .home-container-img {
+        width: clamp(200px, 23vw, 280px);
+        height: clamp(300px, 35vw, 400px); 
+    }
+    .home-container-text {
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 100%;
+    }
+    .home-container-text {
+        h2 {
+            font-size: 30px;
+        }
+    }    
+}
