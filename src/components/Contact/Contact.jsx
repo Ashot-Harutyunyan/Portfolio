@@ -51,7 +51,7 @@ function Contact() {
     if(!handleValidate()) return
     
     emailjs.send(
-      'service_vw88ir5', 
+      'service_ms58cbr', 
       'template_klj3kwn', 
       formSubmit,
       'PRf0gnNbrDTAXMC4C' 
